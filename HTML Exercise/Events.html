@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            background-image: linear-gradient(120deg, white, rgb(253, 210, 217));
+        }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 48%);
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            color: #007bff;
+            background-color: #e9e9e9;
+        }
+
+        .Eventgallery {
+            margin-top: 1rem;
+        }
+
+        .Eventgallery h1 {
+            color: #010101;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            letter-spacing: -0.02em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .media {
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-image: linear-gradient(235deg, pink, rgb(254 218 218), #ebc7c7);
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 4px ridge #2e1717;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        th {
+
+            font-weight: bold;
+        }
+
+        .image {
+            width: 12rem;
+        }
+
+        .reg {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0 2rem 0;
+        }
+
+        .form {
+            background-image: url("./Media/background.avif");
+            padding: 30px;
+            border-radius: 112px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.353);
+            backdrop-filter: brightness(40%);
+        }
+
+        .form h2 {
+            color: #1b2d40;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #000000;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 1em;
+            color: #495057;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #832062;
+            box-shadow: 0 0 0 3px rgba(255, 1, 183, 0.41);
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button[type="submit"] {
+            padding: 12px 20px;
+            transform: translateX(10rem);
+            background-color: #ff2dd5;
+            color: rgb(58, 12, 45);
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #351032;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a style="text-decoration: none; color:rgb(0, 0, 0);" href="index.html" target="_blank">Home</a>
+        <a style="text-decoration: none;color:rgb(0, 0, 0)" href="Events.html" target="_blank">Events</a>
+        <a style="text-decoration: none;color:rgb(0, 0, 0)" href="Contact.html" target="_blank">Contact</a>
+    </nav>
+    <section class="Eventgallery">
+        <h1 class="heading">Image Gallery for Community Events</h1>
+        <div class="media">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img class="image" src="./Media/1.png" title="Event 1" alt="Event 1"></td>
+                        <td><img class="image" src="./Media/4.png" title="Event 2" alt="Event 2"></td>
+                        <td><img class="image" src="./Media/3.png" title="Event 3" alt="Event 3"></td>
+                    </tr>
+                    <tr>
+                        <td><img class="image" src="./Media/9.png" title="Event 4" alt="Event 4"></td>
+                        <td><img class="image" src="./Media/6.png" title="Event 5" alt="Event 5"></td>
+                        <td><img class="image" src="./Media/7.png" title="Event 6" alt="Event 6"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="reg">
+        <div class="form">
+            <h2>Event Registration Form</h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="e.g., example@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Preferred Event Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventType">Type of Event:</label>
+                    <select id="eventType" name="eventType" required>
+                        <option value="">-- Please select an event type --</option>
+                        <option value="conference">Conference</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="gala">Formal Event</option>
+                        <option value="meeting">Business Meeting</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us more about your event needs..."></textarea>
+                </div>
+
+                <button type="submit" id="submission">Submit Inquiry</button>
+                    <script>
+                        function register(){
+                            alert("Registration submitted!");
+                        }
+                        document.getElementById("submission").onclick=register;
+                    </script>
+            </form>
+        </div>
+    </section>
+    
+</body>
+
+</html>
